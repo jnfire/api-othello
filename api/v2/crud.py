@@ -83,7 +83,7 @@ def registrar_partida_revancha(db: Session, datos: schemas.CrearPartida, partida
     # Relleno la ficha de la partida
     db_partida = models.Partida(
         id_partida=id,
-        tipo_de_partida=datos.id_jugador,
+        tipo_de_partida=options.online,
         estado=options.Estado.espera,
         tablero=game.tablero_default,
     )
